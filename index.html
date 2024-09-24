@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="HuDOR: Bridging the Human to Robot Dexterity Gap through Object-Oriented Rewards">
+  <meta name="keywords" content="Reinforcement Learning, Robot Hand manipulation, Robot Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HuDOR: Bridging the Human to Robot Dexterity Gap through Object-Oriented Rewards</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--<script defer src="./static/js/fontawesome.all.min.js"></script>-->
+  <script src="https://kit.fontawesome.com/8a0d0cac45.js" crossorigin="anonymous"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">HuDOR: Bridging the Human to Robot Dexterity Gap through
+              Object-Oriented Rewards</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://irmakguzey.github.io/">Irmak Guzey</a>,</span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/yinlong-dai-28aa35168/">Yinlong Dai</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://georgysavva.github.io/">Georgy Savva</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://raunaqbhirangi.github.io/">Raunaq Bhirangi</a>,</span>
+              <span class="author-block">
+                <a href="https://www.lerrelpinto.com/">Lerrel Pinto</a>,
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"> New York University</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2409.08276" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa-solid fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2409.08276" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Put a new line-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="publication-video">
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/main_video.m4v" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <br />
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Training robots directly from human videos is
+              an emerging area in robotics and computer vision. While
+              there has been notable progress with two-fingered grippers,
+              learning autonomous tasks without teleoperation remains a
+              difficult problem for multi-fingered robot hands. A key reason
+              for this difficulty is that a policy trained on human hands
+              may not directly transfer to a robot hand with a different
+              morphology.
+            </p>
+            <p>
+              In this work, we present HUDOR, a technique
+              that enables online fine-tuning of the policy by constructing
+              a reward function from the human video. Importantly, this
+              reward function is built using object-oriented rewards derived
+              from off-the-shelf point trackers, which allows for meaningful
+              learning signals even when the robot hand is in the visual
+              observation, while the human hand is used to construct the
+              reward. Given a single video of human solving a task, such
+              as gently opening a music box, HUDOR allows our four-
+              fingered Allegro hand to learn this task with just an hour of
+              online interaction. Our experiments across four tasks, show
+              that HUDOR outperforms alternatives with an average of 4×
+              improvement.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/method_video.m4v" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div class="content has-text-centered">
+            <p>
+              We present <b>HuDOR</b>, a technique that enables multi-fingered robot hands to learn dexterous tasks by
+              leveraging object-oriented rewards derived from human videos. By tracking the motion of objects rather
+              than focusing on hand morphology, HUDOR constructs reward functions that guide the robot's learning
+              process through inverse reinforcement learning. The system refines an initial robot policy by comparing
+              the object’s trajectory in human and robot videos, allowing the robot to adapt and perform tasks such as
+              opening a box with just an hour of online training. Unlike traditional methods, HUDOR eliminates the need
+              for teleoperation or extensive human demonstrations, and it generalizes well to new objects, though its
+              effectiveness decreases with significant changes in object texture or weight.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 style="margin-bottom: 1em ;" class="title is-3">Policy Rollouts</h2>
+          <div class="content">
+            <p>In the videos below you can see HuDOR solve four various tasks</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Music Box Opening</h3>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/music_box_opening.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Paper Sliding</h3>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/paper_sliding.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Bread Picking</h3>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/bread_picking.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <h3 class="title is-4">Card Sliding</h3>
+          <div class="content has-text-centered">
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/card_sliding.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 style="margin-bottom: 1em ;" class="title is-3">Policy Generalization</h2>
+          <div class="content">
+            <p>              Generalization experiments on Bread Picking and Card
+              Sliding task. We input the text prompts on top and bottom as input
+              to the language grounded SAM model to get the initial mask for
+              each object.</p>
+          </div>
+        </div>
+      </div>
+      <h3 style="text-align: center;" class="title is-4">Bread Picking Task</h3>
+
+      <div class="columns is-centered">
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-4">Dobby</h4>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/generalization_dobby.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-4">Brown Music Box</h4>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/generalization_brown_music_box.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+          <div class="column">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">Medicine Bottle</h4>
+              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/generalization_medicine_bottle.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-4">Red Peg</h4>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/generalization_red_peg.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      <h3 style="text-align: center;" class="title is-4">Card Sliding Task</h3>
+
+      <div class="columns is-centered">
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-4">Gum Package</h4>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/generalization_gum_package.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-4">Small Plate</h4>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/generalization_small_plate.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-4">Brown Tissue</h4>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/generalization_brown_tissue.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-4">Yellow Tea Bag</h4>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/generalization_yellow_tea_bag.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+  
+  
+      <div class="columns is-centered">
+         <div class="column is-full-width">
+          <h2 class="title is-3">Experiment Results</h2>
+        </div>
+      </div>
+  
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div class="content">
+            <!-- <h3 class="title is-4">Comparison Across Sensors -- Plug Insertion</h3> -->
+            <img src="./static/images/trajectories_moving.png" alt="Trajectories Moving" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
+                code</a> of this website,
+              we just ask that you link back to this page in the footer.
+              Please remember to remove the analytics code included in the header of the website which
+              you do not want on your website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
