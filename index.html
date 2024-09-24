@@ -102,8 +102,8 @@
     <div class="container is-max-desktop">
       <!-- Paper video. -->
       <div class="columns is-centered has-text-centered">
-        <!-- <div class="column is-four-fifths"> -->
-        <div class="column">
+        <div class="column is-four-fifths">
+        <!-- <div class="column"> -->
           <div class="publication-video">
             <video id="dollyzoom" controls muted loop playsinline height="100%">
               <source src="./static/videos/hudor_compr_more.mp4" type="video/mp4">
@@ -149,8 +149,6 @@
         </div>
       </div>
       <!--/ Abstract. -->
-
-
   </section>
 
 
@@ -185,7 +183,7 @@
               indicated by the rainbow-colored dots, over the trajectory. 
               This allows for online training of multi-fingered robot hands given only a single video of a human solving the task (left) 
               and without robot teleoperation. To optimize the robot's policy (middle), 
-              rewards are computed by matching the point movements of the robot policy (T_R) with those in the human video (T_H). 
+              rewards are computed by matching the point movements of the robot policy with those in the human video. 
               In under an hour of online fine-tuning, our Allegro robot hand (right) is able to <i>open the music box</i>.
             </p>
           </div>
@@ -233,8 +231,8 @@
           </div>
         </div>
         <div class="column">
-          <h3 class="title is-4">Card Sliding</h3>
           <div class="content has-text-centered">
+            <h3 class="title is-4">Card Sliding</h3>
             <video id="dollyzoom" controls muted loop playsinline height="100%">
               <source src="./static/videos/card_sliding_comp.mp4" type="video/mp4">
             </video>
@@ -370,13 +368,12 @@
             <img src="./static/images/reward_experiments.png" alt="Reward Experiments" />
 
             <p>
-              In HuDOR in order to compensate for the visual differences between the human and robot videos, 
-              we use object-oriented point tracking based reward functions to guide the online learning. 
+              In HuDOR, we use points trajectory based reward functions to guide the online learning. 
               We ablate over our design decision, and train online policies for three of our tasks with 
               image representation based and points based reward functions. 
             </p>
             <p>
-              HuDOR shows improvement over both of these baselines. 
+              <b>HuDOR</b> shows improvement over both of these baselines. 
             </p>
 
           </div>
