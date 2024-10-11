@@ -292,7 +292,6 @@
       <h3 style="text-align: center;" class="title is-4">Card Sliding Task</h3>
 
       <div class="columns is-centered">
-
         <div class="column">
           <div class="content has-text-centered">
             <h4 class="title is-4">Gum Package</h4>
@@ -350,16 +349,76 @@
             </p>
           </div>
 
-          <div class="content">
+          <!-- <div class="content">
             <img src="./static/images/website_trajectories_moving.png" alt="Trajectories Moving" />
             <p>
               We also illustrate above, how online learning improves the policy in the Paper Sliding task. 
               As can be seen, <b>HuDOR</b> enables the robot policy trajectory to move progressively closer to that of the human expert.
             </p>
+          </div> -->
+
+          
+
+          <h3 style="text-align: center;" class="title is-4">How does the online finetuning improve the policy?</h3>
+          <div class="content">
+            <p>
+              We also illustrate below, how online learning improves the policy in the Paper Sliding task. 
+              As can be seen, <b>HuDOR</b> enables the robot policy trajectory to move progressively closer to that of the human expert.
+            </p>
+            <img src="./static/images/website_trajectories_moving.png" alt="Trajectories Moving" />
           </div>
+
 
         </div>
       </div>
+
+      <h3 style="text-align: center;" class="title is-4">Rollouts of Offline Baselines</h3>
+      <p>
+        We show the rollouts of our best offline baseline Point Cloud BC for three of our tasks below. 
+        Note how, in the Bread Picking and Paper Sliding tasks, the hand progressively lowers, 
+        while in the Card Sliding task, once the card is slid to the edge, the algorithm fails to recover.
+      </p>
+
+      <br>
+      
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-size-6">Bread Picking Success</h4>
+             <!-- <p></p> -->
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/point_cloud_bc_bread_picking_success.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-size-6">Bread Picking Failure</h4>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/point_cloud_bc_bread_picking_failure.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-size-6">Card Sliding</h4>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/point_cloud_bc_card_sliding.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-size-6">Paper Sliding</h4>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/point_cloud_bc_paper_sliding.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+
 
       <div class="columns is-centered">
         <div class="column is-full-width">
