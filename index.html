@@ -72,16 +72,16 @@
 
             <div class="column has-text-centered">
               <div class="publication-links">
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://drive.google.com/file/d/12di1sZnlGyfX-WCCHupctXe0ffwfNBE9/view?usp=sharing" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fa-solid fa-file-pdf"></i>
                     </span>
                     <span>Paper</span>
                   </a>
-                </span>
+                </span> -->
                 <span class="link-block">
-                  <a href="https://drive.google.com/file/d/12di1sZnlGyfX-WCCHupctXe0ffwfNBE9/view?usp=sharing" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/abs/2410.23289" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -159,7 +159,7 @@
         <div class="column">
           <div class="content has-text-centered">
             <video id="dollyzoom" controls muted loop playsinline height="100%">
-              <source src="./static/videos/website_method.mp4" type="video/mp4">
+              <source src="./static/videos/method_video_small.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -242,7 +242,7 @@
 
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 style="margin-bottom: 1em ;" class="title is-3">Policy Generalization</h2>
+          <h2 style="margin-bottom: 1em ;" class="title is-3">Generalization to New Objects</h2>
           <div class="content">
             <p>              Generalization experiments on Bread Picking and Card
               Sliding task. We input the text prompts on top and bottom as input
@@ -251,10 +251,9 @@
           </div>
         </div>
       </div>
+
       <h3 style="text-align: center;" class="title is-4">Bread Picking Task</h3>
-
       <div class="columns is-centered">
-
         <div class="column">
           <div class="content has-text-centered">
             <h4 class="title is-4">Dobby</h4>
@@ -289,8 +288,9 @@
           </div>
         </div>
       </div>
-      <h3 style="text-align: center;" class="title is-4">Card Sliding Task</h3>
 
+
+      <h3 style="text-align: center;" class="title is-4">Card Sliding Task</h3>
       <div class="columns is-centered">
         <div class="column">
           <div class="content has-text-centered">
@@ -327,6 +327,33 @@
         </div>
       </div>
   
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 style="margin-bottom: 1em ;" class="title is-3">Generalization to Larger Areas</h2>
+          <div class="content">
+            <p> To generalize to larger areas, we decouple object reaching from object manipulation. 
+              We determine the object's location relative to the robot using object detection
+              techniques and relative transforms, apply the same process to the human demonstration,
+              calculate the offset between the current and original object locations,
+              and integrate this offset into the policy trained with HuDOR.
+              For simpler tasks, such as picking up bread, HuDOR achieves an 85% success rate within an evaluation area of 40 cm x 50 cm. 
+              However, for more dexterous tasks, the success rate drops to around 40%.
+              </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/spacial_gen_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
   
       <div class="columns is-centered">
          <div class="column is-full-width">
@@ -349,15 +376,6 @@
             </p>
           </div>
 
-          <!-- <div class="content">
-            <img src="./static/images/website_trajectories_moving.png" alt="Trajectories Moving" />
-            <p>
-              We also illustrate above, how online learning improves the policy in the Paper Sliding task. 
-              As can be seen, <b>HuDOR</b> enables the robot policy trajectory to move progressively closer to that of the human expert.
-            </p>
-          </div> -->
-
-          
 
           <h3 style="text-align: center;" class="title is-4">How does the online finetuning improve the policy?</h3>
           <div class="content">
@@ -439,8 +457,127 @@
         </div>
       </div>
 
-      
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+         <h2 class="title is-3">Example Human Videos</h2>
+         <div class="content">
+           <p> We showcase how the human videos look like. Coupled with the corresponding hand poses,
+            note that this is the only offline data used to train robot policies.
+           </p>
+         </div>
+       </div>
+      </div>
 
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Music Box Opening</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/music_box_human_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Card Sliding</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/card_sliding_human_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Bread Picking</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/bread_picking_human_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Paper Sliding</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/paper_sliding_human_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="text-align: center;" class="title is-4">Object Trackings</h3>
+      <h4 style="text-align: center;" class="title is-size-6">Human Video Masks</h4>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/human_bread_picking_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/human_card_sliding_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/human_music_box_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/human_paper_sliding_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <h4 style="text-align: center;" class="title is-size-6">Robot Video Masks</h4>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/robot_bread_picking_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/robot_card_sliding_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/robot_music_box_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/robot_paper_sliding_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+    </div>
+      
     </div>
   </section>
 
